@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&display=swap'); 
+
+:root {
+    --p-col: #FF6B03;
+    --s-col: #343036;
+    --t-col: #ECECEC;
+    --font-family:'League Spartan', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ body {
+    background-color: var(--t-col);
+    font-family: 'League Spartan', sans-serif;
+ } 
+
+ .navbar-big {
+    display: flex; 
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+ } 
+ .company-name h2 {
+    font-size: 2.1em;
+    font-weight: 900;
+ } 
+ .company-name span {
+    color: var(--p-col);
+ }
+ .login-page-menu {
+    display: flex;
+    margin-left: 16%;
+    padding-top: 10px;
+ } 
+ .menus {
+    margin-left: 30px;
+ } 
+ .menus p {
+    font-weight:700;
+    color: var(--s-col);
+    font-size: 1.2em;
+ }
+ 
+ .our-contact {
+    margin-left: 20%;
+ }
+
+.our-contact button {
+    width: 150%;
+    height: 40px;
+    border-radius: 20px 20px 20px 20px;
+    border: none;
+    background-color: var(--p-col);
+    font-family: var(--font-family);
+    color: white;
+    font-weight: 600;
+
+} 
+
+.banner-hero {
+    margin-top: 110px;
+    display: flex;
+    height: 500px;
+} 
+
+.bigDiv-writeUp {
+    margin-top: 90px; 
+} 
+
+.first-writeUp {
+    width: 50%; 
+    margin-left: 13%;
+    /* padding-left: 10%; */
+}
+.first-writeUp h1 {
+    font-size: 3.5em;
+    font-weight:700;
+}
+
+.second-writeUp {
+    width: 60%; 
+    margin-left: 13%;
+    margin-top: 20px;
+}
+.second-writeUp p {
+    font-size: 1em;
+    font-weight:500;
+} 
+
+.get-started-button {
+    margin-top: 10px;
+    margin-left: 13%;
+
+} 
+
+
+.get-started-button button {
+    height: 40px;
+    padding-top: 5px;
+    width: 10%; 
+    font-weight: 600;
+    background-color: var(--p-col);
+    border: none;
+    border-radius: 20px 20px 20px 20px; 
+    font-family: var(--font-family);
+}
+.get-started-button a {
+    text-decoration: none;
+    color: white;
+}
+.form-class {
+    margin-left: -15%;
+    width: 30%;
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 30px;
+    background-color: white;
+} 
+.form-header h3 {
+    text-align: center;
+    font-size: 1.5em;
+}
+.form-header p {
+    text-align: center;
+    margin-top: 20px;
+} 
+
+.username-div, .password-div, .lastname-div, .email-div {
+    margin-top: 20px;
+} 
+
+.allinfo-div {
+    margin-left: 20px;
+}
+.input-class {
+    background-color: rgb(228,228,228);
+    border: none;
+    width: 95%;
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid rgb(161, 158, 158);
+    margin-top:10px;
+} 
+#start {
+    height: 40px;
+    padding-top: 5px;
+    width: 95%; 
+    font-weight: 600;
+    background-color: var(--p-col);
+    border: none;
+    border-radius: 20px 20px 20px 20px; 
+    font-family: var(--font-family); 
+    color: white;
+    margin-top: 20px;
+} 
+
+.sponsors {
+    width: 100%;
+    background-color: white;
+    margin-top: 120px;
+}
+
+.sponsors-div {
+    display: flex;
+    justify-content: center;
+} 
+.abstract-logo {
+    margin-top: 25px;
+} 
+.airbnb-logo {
+    margin-top: 10px;
+} 
+ .adobe-logo, .anchor-logo, .airbnb-logo, .canop-logo {
+    margin-left: 68px;
+} 
+.second-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+} 
+.second-section-header {
+    text-align: center;
+} 
+
+.services-div {
+    display: flex;
+    width: 80%;
+    margin-left: 10%; 
+    margin-top: 50px;
+}
+.group-orders {
+    padding-top: 30px; 
+    background-color: white; 
+    border: none; 
+    border-radius: 12px 12px 12px 12px;
+} 
+.group-orders:hover{
+    border: 1px solid var(--p-col);
+    width: 75%; 
+    transform: scale(1.1);
+    transition: 600ms transform;
+}
+.group-orders1 {
+    margin-left: 15px;
+    padding-top: 30px;
+    background-color: white; 
+    border: none;
+    border-radius: 12px 12px 12px 12px;
+} 
+.group-orders1:hover {
+    width: 75%;
+    border: 1px solid var(--p-col); 
+    transform: scale(1.1);
+    transition: 600ms transform;
+}
+.group-orders2 {
+    margin-left: 15px;
+    padding-top: 30px;
+    background-color: white;
+    border: none; 
+    border-radius: 12px 12px 12px 12px;
+} 
+.group-orders2:hover {
+    width: 75%;
+    border: 1px solid var(--p-col); 
+    transform: scale(1.1);
+    transition: 600ms transform;
+} 
+.font-img {
+    text-align: center;
+} 
+.font-name {
+    text-align: center;
+    margin-top: 30px;
+} 
+.font-desc {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+} 
+
+.first-container-img {
+    display: flex;
+    justify-content:center;
+} 
+.container2-img {
+    margin-top: 10px;
+}
+.second-container-img {
+    display: flex;
+    justify-content: center;
+}  
+.customer-reviews {
+    border: 1px solid rgb(177, 171, 171);
+    border-radius: 12px 12px 12px 12px; 
+    padding-top: 30px;
+}
+.review {
+    text-align: center;
+} 
+.customer-name {
+    text-align: center; 
+    margin-top: 20px;
+    font-weight: 600;
+} 
+.review {
+    margin-top: 15px;
+} 
+#first-review:hover {
+    border: 1px solid var(--p-col);
+    margin-bottom: 25px;
+    transform: scale(1.1);
+    transition: 600ms transform; 
+    background-color: var(--t-col);
+} 
+
+#second-review:hover {
+    border: 1px solid var(--p-col);
+    margin-bottom: 25px;
+    transform: scale(1.1);
+    transition: 600ms transform; 
+    background-color: var(--t-col);
+} 
+#third-review:hover {
+    border: 1px solid var(--p-col);
+    margin-bottom: 25px;
+    transform: scale(1.1);
+    transition: 600ms transform; 
+    background-color: var(--t-col);
+}
