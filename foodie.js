@@ -56,8 +56,8 @@ foodie.post('/getStarted', async (req,res)=> {
         await Users.save() 
         res.redirect('/')
     } catch(error) {
-        console.log('error')
-    } 
+        console.log('error')  
+    }
 })  
 
 

@@ -270,7 +270,7 @@
 } 
 #first-review:hover {
     border: 1px solid var(--p-col);
-    margin-bottom: 25px;
+    width: 75%;
     transform: scale(1.1);
     transition: 600ms transform; 
     background-color: var(--t-col);
@@ -278,14 +278,14 @@
 
 #second-review:hover {
     border: 1px solid var(--p-col);
-    margin-bottom: 25px;
+    width: 75%;
     transform: scale(1.1);
     transition: 600ms transform; 
     background-color: var(--t-col);
 } 
 #third-review:hover {
     border: 1px solid var(--p-col);
-    margin-bottom: 25px;
+    width: 75%;
     transform: scale(1.1);
     transition: 600ms transform; 
     background-color: var(--t-col);
