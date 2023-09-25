@@ -19,6 +19,7 @@ const connectDB = require('./utilities/database')
 const User = require('./model/userSchema') 
 const breakfast = require('./model/breakfastSchema')
 const lunch = require('./model/lunchSchema')
+const dinner = require('./model/DinnerSchema')
 
 connectDB()  
 
@@ -31,6 +32,8 @@ foodie.set('view engine', 'ejs')
 
 foodie.set('views', path.join(__dirname, '/views')) 
 foodie.use(express.static(path.join(__dirname, 'public')))
+
+
 
 foodie.get('/', (req,res)=> {
     res.render('GetStarted.ejs', {message:req.flash('info')})
@@ -64,7 +67,7 @@ foodie.post('/breakfast', async (req,res)=> {
         breakfastDescription: breakfastDescription
     }) 
     await breakfastMenu.save() 
-    res.redirect('/CreateBreakfast')
+    res.redirect('/createBreakfast')
     }catch(error){
         console.log('there seems to be  an error')
     }
@@ -74,19 +77,42 @@ foodie.post('/lunch', async (req,res)=> {
         const {lunchName, lunchImage, lunchPrice, lunchDescription} = req.body
     console.log({lunchName, lunchPrice})
     const foundLunch = await lunch.findOne({lunchName:lunchName}) 
-    if(foundLunch) {
+    if(foundLunch) { 
         req.flash('info', 'This Lunch is already available on the menu')
         res.redirect('/createLunch') 
         return
     } 
     const lunchMenu = new lunch ({
         lunchName: lunchName,
-        lunchfastImage: lunchImage,
+        lunchImage: lunchImage,
         lunchPrice: lunchPrice,
         lunchDescription: lunchDescription
     }) 
     await lunchMenu.save()  
-    res.redirect('/CreateLunch')
+    res.redirect('/createLunch')
+    }catch(error){
+        console.log('there seems to be an error')
+    }
+})
+
+foodie.post('/dinner', async (req,res)=> {
+    try{
+        const {dinnerName, dinnerImage, dinnerPrice, dinnerDescription} = req.body
+    console.log({dinnerName, dinnerPrice})
+    const foundDinner = await dinner.findOne({dinnerName:dinnerName}) 
+    if(foundDinner) { 
+        req.flash('info', 'This Dinner is already available on the menu')
+        res.redirect('/createDinner') 
+        return
+    } 
+    const dinnerMenu = new dinner ({
+        dinnerName: dinnerName,
+        dinnerImage: dinnerImage,
+        dinnerPrice: dinnerPrice,
+        dinnerDescription: dinnerDescription
+    }) 
+    await dinnerMenu.save()  
+    res.redirect('/createDinner')
     }catch(error){
         console.log('there seems to be an error')
     }
