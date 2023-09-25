@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head) %>
+<body>
+    <%- include('partials/getStartednavbar') %>
+    
+    <div class="form-class" style="margin-left: 35%; margin-top: 90px; margin-bottom: 70px; padding-bottom: 30px;">
+        <form action="/lunch" method="post">
+            <div class="form-header"> 
+                <h3>Let's Eat</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nisi fugiat libero consequatur.</p>
+            </div> 
+            <div class="errorMsg" style=" margin-top: 20px; text-align: center;">
+                <p style="color:rgb(214, 24, 24)"><%=message%></p>
+            </div>
+            <div class="allinfo-div" style="margin-top: 10px;">
+                <div class="username-div">
+                    <label for="">Dinner name</label>
+                    <br>
+                    <input type="text" name="dinnerName" class="input-class" id="firstname" >
+                </div>
+                <div class="lastname-div">
+                <label for="">Dinner image</label>
+                <br>
+                <input type="text" name="dinnerImage" class="input-class" id="password">
+            </div>
+            <div class="email-div">
+                <label for="">Dinner price</label>
+                <br>
+                <input type="text" name="dinnerPrice" class="input-class" id="password">
+            </div>
+            <div class="password-div">
+                <label for="">Dinner description</label> 
+                <br>
+                <input type="text" name="dinnerDescription" class="input-class" id="password">
+            </div>
+            <div class="getStarted-div">
+                <button type="submit" id="start">Create Dinner</button>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
