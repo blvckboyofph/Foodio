@@ -52,7 +52,7 @@ foodie.post('/breakfast', async (req,res)=> {
         const {breakfastName, breakfastImage, breakfastPrice, breakfastDescription} =req.body
     console.log({breakfastName, breakfastPrice})
     const foundBreakfast = await breakfast.findOne({breakfastName:breakfastName}) 
-    if(foundBreakfast) {
+    if(foundBreakfast) { 
         req.flash('info', 'This breakfast is already available on the menu')
         res.redirect('/createBreakfast') 
         return
