@@ -47,7 +47,9 @@ foodie.get('/createLunch', (req,res)=> {
 foodie.get('/createDinner', (req,res)=> {
     res.render('dinner.ejs', {message:req.flash('info')})
 }) 
-
+foodie.get('/login', (req,res)=> {
+    res.render('login.ejs', {message:req.flash('info')})
+}) 
  
 
 foodie.post('/breakfast', async (req,res)=> {
