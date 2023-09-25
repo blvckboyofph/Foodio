@@ -34,7 +34,10 @@ foodie.use(express.static(path.join(__dirname, 'public')))
 foodie.get('/', (req,res)=> {
     res.render('GetStarted.ejs')
 })  
-
+foodie.get('/createBreakfast', (req,res)=>{
+    res.render('breakfast.ejs')
+})
+ 
 
 foodie.post('/getStarted', async (req,res)=> {
     try{
