@@ -81,7 +81,7 @@ foodie.post('/lunch', async (req,res)=> {
         lunchPrice: lunchPrice,
         lunchDescription: lunchDescription
     }) 
-    await lunchMenu.save() 
+    await lunchMenu.save()  
     res.redirect('/CreateLunch')
     }catch(error){
         console.log('there seems to be an error')
