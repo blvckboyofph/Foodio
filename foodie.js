@@ -37,6 +37,9 @@ foodie.get('/', (req,res)=> {
 foodie.get('/createBreakfast', (req,res)=>{
     res.render('breakfast.ejs', {message:req.flash('info')})
 })
+foodie.get('/createLunch', (req,res)=> {
+    res.render('lunch.ejs')
+})
  
 
 foodie.post('/breakfast', async (req,res)=> {

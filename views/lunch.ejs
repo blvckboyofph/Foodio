@@ -5,7 +5,7 @@
     <%- include('partials/getStartednavbar') %>
 
     <div class="form-class" style="margin-left: 35%; margin-top: 90px; margin-bottom: 70px; padding-bottom: 30px;">
-        <form action="/breakfast" method="post">
+        <form action="/lunch" method="post">
             <div class="form-header"> 
                 <h3>Let's Eat</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nisi fugiat libero consequatur.</p>
@@ -15,31 +15,33 @@
             </div>
             <div class="allinfo-div" style="margin-top: 10px;">
                 <div class="username-div">
-                    <label for="">Breakfast name</label>
+                    <label for="">Lunch name</label>
                     <br>
-                    <input type="text" name="breakfastName" class="input-class" id="firstname" >
+                    <input type="text" name="lunchName" class="input-class" id="firstname" >
                 </div>
                 <div class="lastname-div">
-                <label for="">Breakfast image</label>
+                <label for="">Lunch image</label>
                 <br>
-                <input type="text" name="breakfastImage" class="input-class" id="password">
+                <input type="text" name="lunchImage" class="input-class" id="password">
             </div>
             <div class="email-div">
-                <label for="">Breakfast price</label>
+                <label for="">lunch price</label>
                 <br>
-                <input type="text" name="breakfastPrice" class="input-class" id="password">
+                <input type="text" name="lunchPrice" class="input-class" id="password">
             </div>
             <div class="password-div">
-                <label for=""> Breakfast description</label> 
+                <label for="">Lunch description</label> 
                 <br>
-                <input type="text" name="breakfastDescription" class="input-class" id="password">
+                <input type="text" name="lunchDescription" class="input-class" id="password">
             </div>
             <div class="getStarted-div">
-                <button type="submit" id="start">Create Breakfast</button>
+                <button type="submit" id="start">Create Lunch</button>
             </div>
         </div>
         </form>
     </div>
+
+
     <%- include('partials/footer') %>
 </body>
 </html>
