@@ -32,12 +32,36 @@ foodie.set('views', path.join(__dirname, '/views'))
 foodie.use(express.static(path.join(__dirname, 'public')))
 
 foodie.get('/', (req,res)=> {
-    res.render('GetStarted.ejs')
+    res.render('GetStarted.ejs', {message:req.flash('info')})
 })  
 foodie.get('/createBreakfast', (req,res)=>{
-    res.render('breakfast.ejs')
+    res.render('breakfast.ejs', {message:req.flash('info')})
 })
  
+
+foodie.post('/breakfast', async (req,res)=> {
+    try{
+        const {breakfastName, breakfastImage, breakfastPrice, breakfastDescription} =req.body
+    console.log({breakfastName, breakfastPrice})
+    const foundBreakfast = await breakfast.findOne({breakfastName:breakfastName}) 
+    if(foundBreakfast) {
+        req.flash('info', 'This breakfast is already available on the menu')
+        res.redirect('/createBreakfast') 
+        return
+    } 
+    const breakfasts = new breakfast ({
+        breakfastName: breakfastName,
+        breakfastImage: breakfastImage,
+        breakfastPrice: breakfastPrice,
+        breakfastDescription: breakfastDescription
+    }) 
+    await breakfasts.save() 
+    res.redirect('/CreateBreakfast')
+    }catch(error){
+        console.log('there is an error')
+    }
+})
+
 
 foodie.post('/getStarted', async (req,res)=> {
     try{

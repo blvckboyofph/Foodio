@@ -4,13 +4,16 @@
 <body>
     <%- include('partials/getStartednavbar') %>
 
-    <div class="form-class" style="margin-left: 35%; margin-top: 90px; margin-bottom: 70px;">
+    <div class="form-class" style="margin-left: 35%; margin-top: 90px; margin-bottom: 70px; padding-bottom: 30px;">
         <form action="/breakfast" method="post">
             <div class="form-header"> 
                 <h3>Let's Eat</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nisi fugiat libero consequatur.</p>
             </div> 
-            <div class="allinfo-div">
+            <div class="errorMsg" style=" margin-top: 20px; text-align: center;">
+                <p style="color:rgb(214, 24, 24)"><%=message%></p>
+            </div>
+            <div class="allinfo-div" style="margin-top: 10px;">
                 <div class="username-div">
                     <label for="">Breakfast name</label>
                     <br>
@@ -24,7 +27,7 @@
             <div class="email-div">
                 <label for="">Breakfast price</label>
                 <br>
-                <input type="email" name="breakfastPrice" class="input-class" id="password">
+                <input type="text" name="breakfastPrice" class="input-class" id="password">
             </div>
             <div class="password-div">
                 <label for=""> Breakfast description</label> 
