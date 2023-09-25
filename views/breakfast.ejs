@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+    <%- include('partials/getStartednavbar') %>
+
+    <div class="form-class">
+        <form action="/breakfast" method="post">
+            <div class="form-header"> 
+                <h3>Let's Eat</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nisi fugiat libero consequatur.</p>
+            </div> 
+            <div class="allinfo-div">
+                <div class="username-div">
+                    <label for="">Breakfast name</label>
+                    <br>
+                    <input type="text" name="breakfastName" class="input-class" id="firstname" >
+                </div>
+                <div class="lastname-div">
+                <label for="">Breakfast image</label>
+                <br>
+                <input type="text" name="breakfastImage" class="input-class" id="password">
+            </div>
+            <div class="email-div">
+                <label for="">Breakfast price</label>
+                <br>
+                <input type="email" name="breakfastPrice" class="input-class" id="password">
+            </div>
+            <div class="password-div">
+                <label for=""> Breakfast description</label> 
+                <br>
+                <input type="text" name="breakfastDescription" class="input-class" id="password">
+            </div>
+            <div class="getStarted-div">
+                <button type="submit" id="start">Create</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -16,7 +16,8 @@ foodie.use(flash());
 
 
 const connectDB = require('./utilities/database')
-const User = require('./model/userSchema')
+const User = require('./model/userSchema') 
+const breakfast = require('./model/breakfastSchema')
 
 connectDB()  
 

@@ -29,4 +29,5 @@ const newUser = new Schema({
 
 
 }) 
+
 module.exports = mongoose.model('User', newUser)     
