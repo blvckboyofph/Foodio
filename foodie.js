@@ -18,6 +18,7 @@ foodie.use(flash());
 const connectDB = require('./utilities/database')
 const User = require('./model/userSchema') 
 const breakfast = require('./model/breakfastSchema')
+const lunch = require('./model/lunchSchema')
 
 connectDB()  
 
@@ -38,7 +39,7 @@ foodie.get('/createBreakfast', (req,res)=>{
     res.render('breakfast.ejs', {message:req.flash('info')})
 })
 foodie.get('/createLunch', (req,res)=> {
-    res.render('lunch.ejs')
+    res.render('lunch.ejs', {message:req.flash('info')})
 })
  
 
@@ -52,16 +53,38 @@ foodie.post('/breakfast', async (req,res)=> {
         res.redirect('/createBreakfast') 
         return
     } 
-    const breakfasts = new breakfast ({
+    const breakfastMenu = new breakfast ({
         breakfastName: breakfastName,
         breakfastImage: breakfastImage,
         breakfastPrice: breakfastPrice,
         breakfastDescription: breakfastDescription
     }) 
-    await breakfasts.save() 
+    await breakfastMenu.save() 
     res.redirect('/CreateBreakfast')
     }catch(error){
-        console.log('there is an error')
+        console.log('there seems to be  an error')
+    }
+})
+foodie.post('/lunch', async (req,res)=> {
+    try{
+        const {lunchName, lunchImage, lunchPrice, lunchDescription} = req.body
+    console.log({lunchName, lunchPrice})
+    const foundLunch = await lunch.findOne({lunchName:lunchName}) 
+    if(foundLunch) {
+        req.flash('info', 'This Lunch is already available on the menu')
+        res.redirect('/createLunch') 
+        return
+    } 
+    const lunchMenu = new lunch ({
+        lunchName: lunchName,
+        lunchfastImage: lunchImage,
+        lunchPrice: lunchPrice,
+        lunchDescription: lunchDescription
+    }) 
+    await lunchMenu.save() 
+    res.redirect('/CreateLunch')
+    }catch(error){
+        console.log('there seems to be an error')
     }
 })
 

@@ -6,7 +6,7 @@ const dbLink = 'mongodb+srv://kayceethetechboy:only1kaycee2@cluster0.lee4t5y.mon
 
 function connectDB() {
     try{
-        console.log("connection to db")
+        console.log("connecting to db")
         mongoose.connect(dbLink,{
             useNewUrlParser:true,
             useUnifiedTopology:true,}).then(e => console.log("database connected successfully"))
