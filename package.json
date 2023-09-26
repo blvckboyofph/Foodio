@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node foodie.js"
+  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "connect-flash": "^0.1.1",
