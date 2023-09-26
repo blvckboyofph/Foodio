@@ -140,14 +140,35 @@ foodie.post('/getStarted', async (req,res)=> {
         }) 
 
         await Users.save() 
-        res.redirect('/')
+        res.redirect('/login')
     } catch(error) {
         console.log('error')  
     }
 })  
 
+let foundUser
+
+foodie.post('/login', async (req,res)=> {
+    try{
+        const{firstName, password} =req.body
+        console.log({firstName, password}) 
+        foundUser = await User.findOne({firstName:firstName})
+
+        if(foundUser) {
+            const users = await bcrypt.compare(password, foundUser.password)
+            if(users) {
+                res.redirect('/')
+            }else {
+                req.flash('info', 'incorrect username or password')
+                res.redirect('/login')
+            }
+        }
+    }catch(error){
+        console.log('error')
+    }
+})
 
 const PORT = 1500
 foodie.listen(PORT, ()=> {
-    console.log(`http://localhost:${PORT}`)
+    console.log(`http://localhost:${PORT}`) 
 }) 

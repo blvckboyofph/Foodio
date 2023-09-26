@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head') %>
-<body>
+<body style="font-family:'League Spartan', sans-serif ;">
     <%- include('partials/getStartednavbar') %>
     
 
@@ -18,26 +18,39 @@
                 <div class="username-div">
                     <label for="">First name</label>
                     <br>
-                    <input type="text" name="dinnerName" class="input-class" id="firstname" >
+                    <input type="text" name="firstName" class="input-class" id="firstname" >
                 </div>
-                <div class="lastname-div">
-                <label for="">Dinner image</label>
-                <br>
-                <input type="text" name="dinnerImage" class="input-class" id="password">
-            </div>
             <div class="password-div">
                 <label for="">Password</label> 
                 <br>
-                <input type="text" name="password" class="input-class" id="password">
+                <input type="password" name="password" class="input-class" id="password">
             </div>
             <div class="getStarted-div">
                 <button type="submit" id="start">Login</button>
             </div>
-            <div class="google-login">
-                <p><img src="/public/images/google-logo.png" alt="" style="max-width: 30px;"></p>
+            <br>
+            <h3 style="margin-left: 45%;">Or</h3>
+            <br>
+            <div class="google-login" style="text-align: center;">
+                <div class="div" style="width: 50%;border: 1px solid #fc9b56; display: flex; margin-left: 80px; padding-left: 10px; border-radius: 20px 20px 20px 20px;">
+                    <div class="logo">
+                     <img src="/public/images/google-logo.png" alt="" style="width: 25px;">
+                    </div> 
+                    <div class="name" style="margin-left: 5px; margin-top: 7px;">
+                     <p><a href="#" style="color:black; text-decoration: none;">Continue with Google</a></p>
+                    </div>
+                </div>
             </div>
-            <div class="apple-login">
-                <p><img src="/public/images/apple logo.png" alt="" style="max-width:40px;"></p>
+            <br>
+            <div class="apple-login" style="text-align: center;">
+                <div class="div" style="width: 50%;border: 1px solid #fc9b56; display: flex; margin-left: 80px; padding-left: 10px; border-radius: 20px 20px 20px 20px;">
+                    <div class="logo">
+                     <img src="/public/images/apple logo.png" alt="" style="width: 40px;">
+                    </div> 
+                    <div class="name" style="margin-left: -5px; margin-top: 7px;">
+                     <p><a href="#" style="color:black; text-decoration: none;">Continue with Apple</a></p>
+                    </div>
+                </div>
             </div>
         </div>
         </form>
