@@ -29,6 +29,6 @@
 } 
 .two-flex {
     display: flex; 
-    justify-content: center;
+    justify-content:space-evenly;
     margin-top: 10px;
 }
