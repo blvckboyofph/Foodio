@@ -50,7 +50,6 @@ foodie.get('/createDinner', (req,res)=> {
 foodie.get('/login', (req,res)=> {
     res.render('login.ejs', {message:req.flash('info')})
 }) 
- 
 
 foodie.post('/breakfast', async (req,res)=> {
     try{
@@ -167,6 +166,20 @@ foodie.post('/login', async (req,res)=> {
         console.log('error')
     }
 })
+
+let allBreakfast
+let allLunch
+let allDinner
+
+foodie.get('/Dashboard', async (req,res)=> {
+    allBreakfast = await breakfast.find()
+    allLunch = await lunch.find()
+    allDinner = await dinner.find() 
+
+    const allFoods = [allBreakfast, allLunch, allDinner]
+    res.render('userDashboard.ejs', {allFoods})
+})
+
 
 const PORT = 1500
 foodie.listen(PORT, ()=> {
