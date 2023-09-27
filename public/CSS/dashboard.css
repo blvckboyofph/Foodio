@@ -1,0 +1,19 @@
+.desc-div {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+} 
+.breakfast{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.ud {
+    display: flex;
+    flex-direction: column;
+}

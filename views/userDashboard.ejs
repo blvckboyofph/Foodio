@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head') %>
-<body>
+  <%- include('partials/head') %>
+  <body>
     <%- include('partials/getStartednavbar') %>
-    
 
-
-
-
+    <div class="breakfasts-div" style="display: flex;">
+        <div class="breakfast-text" style="border: 1px solid black;">
+          <div class="header">
+            <h1>Breakfasts</h1>
+          </div>
+          <div class="desc">
+            <p>
+              Breakfast is often called the most important meal of the day, and
+              for good reason. As the name suggests, breakfast breaks the
+              overnight fasting period.
+            </p>
+          </div>
+          <div class="shop">
+            <a href="#">Shop breakfast meals</a>
+          </div>
+        </div>
+        <div class="breakfastmenu-div">
+        <div class="breakfast">
+          <%allFoods[0].forEach(el => { %>
+          <div class="ud">
+            <div class="img-div">
+              <img src="<%= el.breakfastImage %>" alt="" style="width: 200px">
+            </div>
+            <div class="name-div">
+              <p><%= el.breakfastName %></p>
+            </div>
+            <div class="price-div">
+              <p><%= el.breakfastPrice %></p>
+            </div>
+            <div class="desc-div">
+                <p><%= el.breakfastDescription%></p>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+</div>
 
     <%- include('partials/footer') %>
-</body>
+  </body>
 </html>
