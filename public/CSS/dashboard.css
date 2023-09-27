@@ -4,16 +4,31 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%;
-    text-align: center;
+    width: 200px;
 } 
+.breakfasts-div {
+    width: 80%;
+    margin-left: 10%;
+}
 .breakfast{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    margin-left: 50px;
+}
+.breakfast-text {
     width: 50%;
 }
-
 .ud {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    width: 70%;
+} 
+.img-div {
+    text-align: center;
+} 
+.two-flex {
+    display: flex; 
+    justify-content: center;
+    margin-top: 10px;
 }
