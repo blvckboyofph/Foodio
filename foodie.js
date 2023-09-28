@@ -145,6 +145,7 @@ foodie.post('/getStarted', async (req,res)=> {
     }
 })  
 
+
 let foundUser
 
 foodie.post('/login', async (req,res)=> {
@@ -156,7 +157,7 @@ foodie.post('/login', async (req,res)=> {
         if(foundUser) {
             const users = await bcrypt.compare(password, foundUser.password)
             if(users) {
-                res.redirect('/')
+                res.redirect('/Dashboard')
             }else {
                 req.flash('info', 'incorrect username or password')
                 res.redirect('/login')
@@ -180,6 +181,15 @@ foodie.get('/Dashboard', async (req,res)=> {
     res.render('userDashboard.ejs', {allFoods})
 })
 
+
+
+
+foodie.get('/:lunchName', async (req,res)=> {
+    const {lunchName} = req.params
+
+    const lunchDetails = await lunch.findOne({lunchName:lunchName}) 
+    res.render('foodDetails.ejs', {lunchDetails})
+})  
 
 const PORT = 1500
 foodie.listen(PORT, ()=> {
