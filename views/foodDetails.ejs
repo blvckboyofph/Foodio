@@ -3,8 +3,39 @@
 <%- include('partials/head') %>
 <body>
     <%- include('partials/getStartednavbar') %>
+
+    <div class="header" style="margin-top: 50px; margin-left: 10%;">
+        <h1>Lunch</h1>
+        <br>
+        <h3>Foodio/Lunch/<%=lunchDetails.lunchName%></h3>
+    </div>
+
+    <div class="product-bigCard" style="display: flex; width: 80%; margin-left: 10%; margin-top: 70px;">
+        <div class="image-section">
+            <img src="<%=lunchDetails.lunchImage %>" alt="" style="width:550px; height: 550px; border-radius: 15px;">
+        </div>
+        <div class="about-section" style="margin-left: 70px;">
+            <div class="price-name" style="display: flex; justify-content: space-between; font-weight: 600; width: 80%;">
+                <div class="lunchname">
+                    <p><%=lunchDetails.lunchName%></p>
+                </div>
+                <div class="lunchprice">
+                    <p><%= lunchDetails.lunchPrice %></p>
+                </div>
+            </div>
+            <div class="lunchdesc" style="width: 70%;line-height: 24px;letter-spacing: 0.4px; margin-top: 30px;">
+                <p><%= lunchDetails.lunchDescription %></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
     
-    <p><%=lunchDetails.lunchName%></p>
 
     <%- include('partials/footer') %>
 </body>
