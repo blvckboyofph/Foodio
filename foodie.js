@@ -184,12 +184,20 @@ foodie.get('/Dashboard', async (req,res)=> {
 
 
 
-foodie.get('/:lunchName', async (req,res)=> {
-    const {lunchName} = req.params
+// foodie.get('/:lunchName', async (req,res)=> {
+//     const {lunchName} = req.params
 
-    const lunchDetails = await lunch.findOne({lunchName:lunchName}) 
-    res.render('foodDetails.ejs', {lunchDetails})
-})  
+//     const lunchDetails = await lunch.findOne({lunchName:lunchName}) 
+//     res.render('lunchDetails.ejs', {lunchDetails})
+// })  
+
+foodie.get('/:breakfastName', async (req,res)=> {
+    const {breakfastName} = req.params
+
+    const breakfastDetails = await breakfast.findOne({breakfastName:breakfastName})  
+    res.render('breakfastDetails.ejs', {breakfastDetails}) 
+})     
+ 
 
 const PORT = 1500
 foodie.listen(PORT, ()=> {

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+    <%- include('partials/getStartednavbar') %>
+
+    <div class="header" style="margin-top: 50px; margin-left: 10%;">
+        <h1>Breakfast</h1>
+        <br>
+        <h3>Foodio/Breakfast/<%=breakfastDetails.breakfastName%></h3>
+    </div>
+
+    <div class="product-bigCard" style="display: flex; width: 80%; margin-left: 10%; margin-top: 70px; margin-bottom: 100px;">
+        <div class="image-section">
+            <img src="<%=breakfastDetails.breakfastImage %>" alt="" style="width:550px; height: 550px; border-radius: 15px;">
+        </div>
+
+
+        <div class="about-section" style="margin-left: 70px;">
+            <div class="price-name" style="display: flex; justify-content: space-between; font-weight: 600; width: 80%;">
+                <div class="lunchname">
+                    <h4><%=breakfastDetails.breakfastName%></h4>
+                </div>
+                <div class="lunchprice">
+                    <h4><%= breakfastDetails.breakfastPrice %></h4>
+                </div>
+            </div>
+            <div class="lunchdesc" style="width: 70%;line-height: 24px;letter-spacing: 0.4px; margin-top: 30px;">
+                <p><%= breakfastDetails.breakfastDescription %></p>
+            </div>
+            <div class="note" style="margin-top: 30px;">
+                <h4>Would you like to attach a note?</h4>
+                <div class="buttons" style=" display: flex; justify-content: space-between; width: 30%; margin-top: 15px;">
+                    <div class="yes-btn">
+                        <button type="button" style="width: 350%; height: 40px; border-radius: 5px;border: 1px solid #373737;font-family:'league Spartan', sans-serif ;">Yes</button>
+                    </div>
+                    <div class="no-btn">
+                        <button type="button" style="width: 400%; height: 40px; border-radius: 5px;border: 1px solid #373737;font-family:'league Spartan', sans-serif ;">No</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart" style="display: flex; justify-content: space-between; width: 50%; margin-top: 40px;">
+                <div class="add">
+                    <button style="width: 160%; height: 30px; margin-top: 10px; border-radius: 5px; border: 1px solid #373737" id="cartBtn">Add to Cart</button>
+                </div>
+                <div class="addUp" style="display: flex; width: 35%; justify-content: space-between; margin-top: 10px; border: 1px solid #373737; padding-top: 4px; height: 25px; border-radius: 5px;">
+                    <div class="increase" style="width: 25%; height: 20px; padding-left: 8px;">
+                        <button      style="border: none;">-</button>
+                    </div>
+                    <div class="number" style="margin-top: 5px;">
+                        <p style="font-family:'league Spartan', sans-serif ;">1</p>
+                    </div>
+                    <div class="increase" style="width: 25%; height: 20px; padding-left: 8px;">
+                        <button style="border:none; margin-top: 2px;">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <%- include('partials/footer') %>
+</body>
+</html>
