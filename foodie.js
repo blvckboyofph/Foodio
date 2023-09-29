@@ -195,3 +195,86 @@ const PORT = 1500
 foodie.listen(PORT, ()=> {
     console.log(`http://localhost:${PORT}`) 
 }) 
+
+
+
+
+
+
+
+
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Shopping Cart</title>
+//     <style>
+//         /* Add some basic styling for the cart */
+//         .cart {
+//             border: 1px solid #ccc;
+//             padding: 10px;
+//             margin: 20px;
+//         }
+//     </style>
+// </head>
+// <body>
+//     <!-- Item list with buttons to add to cart -->
+//     <div class="item">
+//         <h3>Item 1</h3>
+//         <button onclick="addToCart('Item 1')">Add to Cart</button>
+//     </div>
+//     <div class="item">
+//         <h3>Item 2</h3>
+//         <button onclick="addToCart('Item 2')">Add to Cart</button>
+//     </div>
+
+//     <!-- Shopping Cart -->
+//     <div class="cart">
+//         <h2>Shopping Cart</h2>
+//         <ul id="cart-items">
+//             <!-- Cart items will be displayed here -->
+//         </ul>
+//     </div>
+
+//     <script>
+//         // Initialize an empty shopping cart
+//         const cart = {};
+
+//         // Function to add items to the cart
+//         function addToCart(itemName) {
+//             if (cart[itemName]) {
+//                 // If the item is already in the cart, increase the quantity
+//                 cart[itemName] += 1;
+//             } else {
+//                 // If it's not in the cart, add it with a quantity of 1
+//                 cart[itemName] = 1;
+//             }
+
+//             // Update the cart display
+//             updateCartDisplay();
+//         }
+
+//         // Function to update the cart display
+//         function updateCartDisplay() {
+//             const cartItems = document.getElementById("cart-items");
+//             cartItems.innerHTML = "";
+
+//             // Iterate through the items in the cart and display them
+//             for (const item in cart) {
+//                 const quantity = cart[item];
+//                 const listItem = document.createElement("li");
+//                 listItem.textContent = `${item} x ${quantity}`;
+//                 cartItems.appendChild(listItem);
+//             }
+//         }
+//     </script>
+// </body>
+// </html>
+
+
+// We have a list of items with buttons that allow you to add items to the cart.
+// The shopping cart is represented by a JavaScript object called cart, where item names are keys, and quantities are values.
+// The addToCart function is called when you click the "Add to Cart" button for an item. It checks whether the item is already in the cart and either increments its quantity or adds it to the cart with a quantity of 1.
+// The updateCartDisplay function updates the displayed cart content every time you add an item to the cart.

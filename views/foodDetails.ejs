@@ -14,17 +14,46 @@
         <div class="image-section">
             <img src="<%=lunchDetails.lunchImage %>" alt="" style="width:550px; height: 550px; border-radius: 15px;">
         </div>
+
+
         <div class="about-section" style="margin-left: 70px;">
             <div class="price-name" style="display: flex; justify-content: space-between; font-weight: 600; width: 80%;">
                 <div class="lunchname">
-                    <p><%=lunchDetails.lunchName%></p>
+                    <h4><%=lunchDetails.lunchName%></h4>
                 </div>
                 <div class="lunchprice">
-                    <p><%= lunchDetails.lunchPrice %></p>
+                    <h4><%= lunchDetails.lunchPrice %></h4>
                 </div>
             </div>
             <div class="lunchdesc" style="width: 70%;line-height: 24px;letter-spacing: 0.4px; margin-top: 30px;">
                 <p><%= lunchDetails.lunchDescription %></p>
+            </div>
+            <div class="note" style="margin-top: 30px;">
+                <h4>Would you like to attach a note?</h4>
+                <div class="buttons" style=" display: flex; justify-content: space-between; width: 30%; margin-top: 15px;">
+                    <div class="yes-btn">
+                        <button type="button" style="width: 350%; height: 40px;">Yes</button>
+                    </div>
+                    <div class="no-btn">
+                        <button type="button" style="width: 400%; height: 40px;">No</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart" >
+                <div class="add">
+                    <button style="width: 50%">Add to Cart</button>
+                </div>
+                <div class="increase">
+                    <div class="reduce">
+                        <button>-</button>
+                    </div>
+                    <div class="number">
+                        <p>1</p>
+                    </div>
+                    <div class="increase">
+                        <button>+</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -36,7 +65,7 @@
 
 
     
-
     <%- include('partials/footer') %>
+    <script src="/public/JS/foodieApp.js"></script>
 </body>
 </html>
