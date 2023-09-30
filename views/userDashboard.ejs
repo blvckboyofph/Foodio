@@ -31,7 +31,7 @@
             </div>
             <div class="two-flex" style="margin-left: -10px;">
                 <div class="name-div" style="text-align: center;margin-left: -15px; font-weight: 600;">
-                    <p><a href="<%=el.breakfastName %>" style="text-decoration: none; color: black;"><%= el.breakfastName %></a></p>
+                    <p><a href="/breakfast/<%=el._id%>" style="text-decoration: none; color: black;"><%= el.breakfastName %></a></p>
                 </div>
                 <div class="price-div" style= " font-weight: 600;">
                     <p><%= el.breakfastPrice %></p>
@@ -70,7 +70,7 @@
         </div>
         <div class="two-flex" style="margin-left: -10px;">
             <div class="name-div" style="text-align: center;margin-left: -15px; font-weight: 600;">
-                <p><a href="/<%-el.lunchName %>"       style="text-decoration: none; color: black; "><%= el.lunchName %></a></p>
+                <p><a href="/lunch/<%-el.lunchName %>"       style="text-decoration: none; color: black; "><%= el.lunchName %></a></p>
             </div>
             <div class="price-div" style= " font-weight: 600;">
                 <p><%= el.lunchPrice %></p>

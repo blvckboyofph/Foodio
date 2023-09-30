@@ -184,29 +184,21 @@ foodie.get('/Dashboard', async (req,res)=> {
 
 
 
-foodie.get('/:breakfastName', async (req,res)=> {
-    const {breakfastName} = req.params
-    const {lunchName} = req.params
-    const {dinnerName} = req.params
+foodie.get('/breakfast/:id', async (req,res)=> {
+    const {id} = req.params;
 
-    breakfastDetails = await breakfast.findOne({breakfastName:breakfastName})  
-    lunchDetails = await lunch.findOne({lunchName:lunchName}) 
-    console.log(lunchDetails)
-    dinnerDetails = await dinner.findOne({dinnerName:dinnerName}) 
-    console.log(dinnerDetails)
+    breakfastDetails = await breakfast.findById({_id:id})  
     console.log(breakfastDetails) 
-
-    const allDetails = [breakfastDetails, lunchDetails, dinnerDetails]
-    res.render('breakfastDetails.ejs', {allDetails}) 
-    return
-})     
+    res.render('breakfastDetails.ejs', {breakfastDetails}) 
+    return  
+})       
  
-// foodie.get('/:lunchName', async (req,res)=> {
-//     const {lunchName} = req.params
+foodie.get('/lunch/:lunchName', async (req,res)=> {
+    const {lunchName} = req.params
 
-//     const lunchDetails = await lunch.findOne({lunchName:lunchName}) 
-//     res.render('lunchDetails.ejs', {lunchDetails})
-// })  
+    const lunchDetails = await lunch.findOne({lunchName:lunchName}) 
+    res.render('lunchDetails.ejs', {lunchDetails})
+})  
 
 
 const PORT = 1500
