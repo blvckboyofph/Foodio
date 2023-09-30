@@ -187,18 +187,16 @@ foodie.get('/Dashboard', async (req,res)=> {
 foodie.get('/breakfast/:id', async (req,res)=> {
     const {id} = req.params;
 
-    breakfastDetails = await breakfast.findById({_id:id})  
-    console.log(breakfastDetails) 
+     const breakfastDetails = await breakfast.findById({_id:id})  
     res.render('breakfastDetails.ejs', {breakfastDetails}) 
-    return  
 })       
  
-foodie.get('/lunch/:lunchName', async (req,res)=> {
-    const {lunchName} = req.params
+foodie.get('/lunch/:id', async (req,res)=> {
+    const {id} = req.params; 
 
-    const lunchDetails = await lunch.findOne({lunchName:lunchName}) 
-    res.render('lunchDetails.ejs', {lunchDetails})
-})  
+    const lunchDetails = await lunch.findById({_id:id}) 
+    res.render('lunchDetails.ejs', {lunchDetails}) 
+})   
 
 
 const PORT = 1500
