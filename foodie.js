@@ -192,7 +192,7 @@ foodie.get('/breakfast/:id', async (req,res)=> {
 })       
  
 foodie.get('/lunch/:id', async (req,res)=> {
-    const {id} = req.params; 
+    const {id} = req.params;      
 
     const lunchDetails = await lunch.findById({_id:id}) 
     res.render('lunchDetails.ejs', {lunchDetails}) 
