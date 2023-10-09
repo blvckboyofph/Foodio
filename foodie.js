@@ -37,7 +37,7 @@ foodie.use(express.static(path.join(__dirname, 'public')))
 
 foodie.get('/', (req,res)=> {
     res.render('GetStarted.ejs', {message:req.flash('info')})
-})  
+})   
 foodie.get('/createBreakfast', (req,res)=>{
     res.render('breakfast.ejs', {message:req.flash('info')})
 })
@@ -189,14 +189,15 @@ foodie.get('/breakfast/:id', async (req,res)=> {
 
      const breakfastDetails = await breakfast.findById({_id:id})  
     res.render('breakfastDetails.ejs', {breakfastDetails}) 
-})       
+})        
  
-foodie.get('/lunch/:id', async (req,res)=> {
-    const {id} = req.params;      
+foodie.get('/:lunchName', async (req,res)=> {
+    const {lunchName} = req.params;    
+    console.log(lunchName)  
 
-    const lunchDetails = await lunch.findById({_id:id}) 
+    const lunchDetails = await lunch.find({lunchName:lunchName})
     res.render('lunchDetails.ejs', {lunchDetails}) 
-})   
+})    
 
 
 const PORT = 1500
